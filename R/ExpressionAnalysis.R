@@ -495,8 +495,8 @@ getGlobalNormFactors <- function(eset, method="median" ){
   }
 
   ### equalize all runs 
-  #eD = data.frame(exprs(eset)[sel,])
-  eD = exprs(eset)[sel,]
+  eD = data.frame(exprs(eset)[sel,])
+  #eD = exprs(eset)[sel,]
   # if only one row (1 selected protein | peptide for norm)
   if(class(eD) == 'numeric'){
     rawDataIdx = eD

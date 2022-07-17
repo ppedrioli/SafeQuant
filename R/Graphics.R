@@ -32,8 +32,8 @@ COLORS <- as.character(c(
 		,sqaProtein=sqaProtein){
 
 	# HACK TO avoid check error. See function call in safeQuant.R @TODO re-structure this messsy function
-	if(is.na(sqaPeptide)){rm(sqaPeptide)}
-	if(is.na(sqaProtein)){rm(sqaProtein)}
+	if(sum(is.na(sqaPeptide))){rm(sqaPeptide)}
+	if(sum(is.na(sqaProtein))){rm(sqaProtein)}
 
 	######################## OVERVIEW PLOT
 	fdr <-userOptions$fdrCutoff
